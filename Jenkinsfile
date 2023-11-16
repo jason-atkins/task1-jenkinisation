@@ -25,8 +25,8 @@ pipeline {
                     ssh jenkins@jason-deploy <<EOF
                     docker network rm task1-net && echo "task1-net removed" || echo "task1-net did not exist"
                     docker network create task1-net
-                    docker stop nginx1 && echo "Stopped nginx1" || echo "nginx1 is not running"
-                    docker rm nginx1 && echo "removed nginx1" || echo "nginx1 does not exist"
+                    docker stop nginx && echo "Stopped nginx" || echo "nginx is not running"
+                    docker rm nginx && echo "removed nginx" || echo "nginx does not exist"
                     docker stop flask-app1 && echo "Stopped flask-app1" || echo "flask-app1 is not running"
                     docker stop flask-app2 && echo "Stopped flask-app2" || echo "flask-app2 is not running"
                     docker stop flask-app3 && echo "Stopped flask-app3" || echo "flask-app3 is not running"
