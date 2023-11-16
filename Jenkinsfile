@@ -32,7 +32,7 @@ pipeline {
                     docker stop flask-app1 && echo "Stopped flask-app1" || echo "flask-app1 is not running"
                     docker stop flask-app2 && echo "Stopped flask-app2" || echo "flask-app2 is not running"
                     docker stop flask-app3 && echo "Stopped flask-app3" || echo "flask-app3 is not running"
-                    docker rm flask-app && echo "removed flask-app" || echo "flask-app does not exist"
+                    docker rm flask-app1 && echo "removed flask-app1" || echo "flask-app1 does not exist"
                     docker rm flask-app2 && echo "removed flask-app2" || echo "flask-app2 does not exist"
                     docker rm flask-app3 && echo "removed flask-app3" || echo "flask-app3 does not exist"
                     docker run -d  --name flask-app1 --network task1-net jasonatkins/task1jenk
