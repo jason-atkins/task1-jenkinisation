@@ -23,6 +23,8 @@ pipeline {
             steps {
                 sh '''
                     ssh jenkins@jason-deploy <<EOF
+                    docker pull jasonatkins/task1jenk
+                    docker pull jasonatkins/task1-nginx
                     docker network rm task1-net && echo "task1-net removed" || echo "task1-net did not exist"
                     docker network create task1-net
                     docker stop nginx && echo "Stopped nginx" || echo "nginx is not running"
