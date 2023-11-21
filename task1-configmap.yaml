@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data: |
+  events {}
+  http {
+    server {
+      listen 80;
+      location / {
+        proxy_pass http://flas-app:5000
+      }
+    }
+  }
