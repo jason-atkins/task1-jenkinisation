@@ -24,7 +24,7 @@ environment {
         stage('Deploy') {
             steps {
                 sh '''
-            sed -e 's,{{yourname}},'${YOUR_NAME}',g;' your-name-secret.yaml | kubectl apply -f -
+            sed -e 's,{{yourname}},'"${YOUR_NAME}"',g;' your-name-secret.yaml | kubectl apply -f -
 		    kubectl apply -f nginx-configmap.yaml
             kubectl apply -f task1-app-manifest.yaml
             kubectl apply -f nginx-manifest.yaml
