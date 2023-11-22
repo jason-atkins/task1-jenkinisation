@@ -15,6 +15,7 @@ spec:
     volumeMounts:
     - name: nginx-vol
       mountPath: /etc/nginx
+    imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
