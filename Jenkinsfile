@@ -20,7 +20,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    ssh jenkins@jason-deploy <<EOF
 		    kubectl apply -f .
                 '''
             }
