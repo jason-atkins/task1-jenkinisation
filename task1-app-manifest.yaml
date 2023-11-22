@@ -11,9 +11,9 @@ spec:
     env:
       - name: YOUR_NAME
         valueFrom:
-        secretKeyRef:
-          name: your-name-secret
-          key: yourname   
+          secretKeyRef:
+            name: your-name-secret
+            key: yourname   
 ---
 apiVersion: v1
 kind: Service
