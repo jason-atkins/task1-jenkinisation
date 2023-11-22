@@ -8,6 +8,9 @@ spec:
   containers:
   - name: app
     image: jasonatkins/task1jenk:latest
+    env:
+      - name: YOUR_NAME
+        value: QA-Kubernetes
 ---
 apiVersion: v1
 kind: Service
