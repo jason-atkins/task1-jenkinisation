@@ -10,7 +10,7 @@ spec:
     image: jasonatkins/task1jenk:latest
     env:
       - name: YOUR_NAME
-        value: QA-Kubernetes
+        value: Jason-Atkins
 ---
 apiVersion: v1
 kind: Service
