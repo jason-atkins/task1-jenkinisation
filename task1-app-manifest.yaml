@@ -10,7 +10,10 @@ spec:
     image: jasonatkins/task1jenk:latest
     env:
       - name: YOUR_NAME
-        value: Jason-Atkins
+        valueFrom:
+        secretKeyRef:
+          name: your-name-secret
+          key: yourname   
 ---
 apiVersion: v1
 kind: Service
