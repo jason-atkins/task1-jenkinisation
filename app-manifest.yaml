@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: task2
+  name: task1
 spec:
 replicas: 2
 selector:
