@@ -16,7 +16,7 @@ environment {
         stage('Push') {
             steps {
                 sh '''
-                docker push jasonatkins/task1jenkv${BUILD_NUMBER}
+                docker push jasonatkins/task1jenk:v${BUILD_NUMBER}
                 '''
             }
 
