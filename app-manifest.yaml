@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app:task1-app
+        app: task1-app
     spec:
       containers:
       - name: task1
