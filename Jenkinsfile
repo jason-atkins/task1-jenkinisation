@@ -46,7 +46,7 @@ environment {
             steps {
                 sh '''
                     kubectl apply -f nginx-configmap.yaml --namespace production
-                    sed -e 's,{{yourname}},'"${YOUR_NAME}"',g;'  -e 's,{{version}},'${BUILD_NUMBER}',g;' app-manifest.yaml | kubectl apply -f - --namespace production
+                    sed -e 's,{{YOUR_NAME}},'${YOUR_NAME}',g;'  -e 's,{{version}},'${BUILD_NUMBER}',g;' app-manifest.yaml | kubectl apply -f - --namespace production
                     kubectl apply -f nginx-pod.yaml --namespace production
                     sleep 60
                     kubectl get services --namespace production
