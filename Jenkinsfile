@@ -38,7 +38,7 @@ environment {
                     sleep 50 
                     export STAGING_IP=\$(kubectl get svc -o json --namespace staging | jq '.items[] | select(.metadata.name == "nginx") | .status.loadBalancer.ingress[0].ip' | tr -d '"')
                     pip3 install requests
-                    python test-app.py
+                    python3 test-app.py
                 '''
             }
         }
